@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Analyzer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="error-message">
+            <p>"Please enter valid name and score(0-100)"</p>
+        </div>
+        <h1>📚 Student Grade Analyzer</h1>
+
+        <!-- Add Student Name and Score -->
+        <div class="add-student">
+            <div class="add-input">
+                <input type="text" placeholder="Student name" class="student-name" id="student-name">
+                <input type="text" placeholder="Score(0-100)" class="student-score" id="student-score">
+            </div>
+            <button class="add" id="add-btn">Add Student</button> 
+        </div>
+        <!-- Students Score -->
+        <div class="students" id="students">
+            <div class="student">
+                <div class="name-score">
+                    <p class="name">Ada Lovelace</p>
+                    <span class="score">Score: 97/100</span>
+                </div>
+                <div class="grade-delete">
+                    <p class="grade" id="grade">A</p>
+                    <button class="del">delete</button>
+                </div>
+            </div>
+
+            <div class="student">
+                <div class="name-score">
+                    <p class="name">Ada Lovelace</p>
+                    <span class="score">Score: 97/100</span>
+                </div>
+                <div class="grade-delete">
+                    <p class="grade" id="grade">A</p>
+                    <button class="del" id="del">delete</button>
+                </div>
+            </div>
+        </div>
+
+            <!-- Remove Failing Student(s) -->
+         <div class="remove">
+            <button class="remove-last" id="remove-f">Remove Failing (F)</button>
+         </div>
+
+         <!-- Transform Data -->
+          <div class="transform-btns">
+            <button onclick="addBonusPoints()" class="add-points">Add 5 bonus points</button>
+            <button onclick="showTopStudents()" class="top-students">Top 3 students</button>
+          </div>
+
+          <div id="top-students" class="top-students-displayed">
+             <h3 class="top3"> The Top Three Students in The Class </h3>
+          </div>
+
+          <!-- Statistics Board -->
+           <div class="stats">
+                <!-- total -->
+                <div class="total">
+                    <p class="total num" id="total">0</p>
+                    <p>Total</p>
+                </div>
+                
+                <!-- average -->
+                <div class="avg">
+                    <p class="average num" id="average">0</p>
+                    <p>Average</p>
+                </div>
+                
+                <!-- highest -->
+                <div class="highest">
+                    <p class="highest num" id="highest">0</p>
+                    <p>Highest</p>
+                </div>
+                
+                <!-- lowest -->
+                <div class="lowest">
+                    <p class="lowest num" id="lowest">0</p>
+                    <p>Lowest</p>
+                </div>
+           </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

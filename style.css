@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --input-border-color: hsl(60, 10%, 92%);
+    --add-button-color: hsl(207, 90%, 61%);
+    --add-button-colorHover: hsl(207, 90%, 43%);
+    --delete-red: hsl(1, 97%, 38%);
+    --text-color: #fff;
+    --grade-bgColor:hsl(210, 11%, 15%);
+}
+body{
+    font-family: 'Kumbh Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 900px;
+    margin-block: 2em 3em;
+    min-height: 90vh;
+    margin-inline: 2em;
+    position:relative;
+}
+/*  */
+.error-message{
+    background-color: hsl(201, 100%, 14%, 0.6);
+    color: #fff;
+    max-width: 430px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2em 1em;
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    transform: translateX(-50%);
+    transition: top 0.5s ease-in-out;
+}
+.show{
+    position: absolute;
+    top: 6%;
+}
+
+/*  */
+h1{
+    font-family: inherit;
+    padding-top: 1em;
+    padding-inline: .6em;
+}
+.add-student{
+    padding: 2em;
+    display: flex;
+    gap: 1.2em;
+}
+.add-input{
+    display: flex;
+    gap: .6em;
+    width: 80%;
+}
+.add-input .student-name{
+    width: 67%;
+}
+.add-input .student-score{
+    width: 34%;
+}
+.add-input > .student-name,
+.add-input > .student-score{
+    border-radius: 6px;
+    border: 2px solid var(--input-border-color);
+    padding: .8em 1em;
+    outline: 0;
+    font-family: inherit;
+}
+.add-student > button{
+    border: 0;
+    outline: 0;
+    background-color: var(--add-button-color);
+    color: #fff;
+    border-radius: 6px;
+    font-family: inherit;
+    padding: .8em 2em;
+    cursor: pointer;
+}
+.add-student > button:hover{
+    background-color: var(--add-button-colorHover);
+}
+.student-name::placeholder,
+.student-score::placeholder{
+    font-style: italic;
+    font-weight: 500;
+    font-size: .9rem;
+}
+/* Students Score*/
+.students{
+    margin: 1em;
+    padding-inline: .6em;
+    background-color: hsl(210, 17%, 93%);
+    min-height: 20vh;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+}
+.student{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    /* margin: 2em; */
+    padding: 1em;
+    border-radius: 6px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.name-score > .name{
+    font-weight: 600;
+    padding-bottom: .4em;
+}
+.name-score > .score{
+    font-size: .9rem;
+}
+.grade-delete{
+    display: flex;
+    align-items: center;
+    gap: .8em;
+
+    @media(max-width:420px) {
+            /* flex-direction: column; */
+        }
+}
+.grade-delete > .grade{
+    color: var(--text-color);
+    background-color: var(--grade-bgColor);
+    padding: 0.4em 0.6em;
+    border-radius: 6px;
+
+    @media(max-width:420px){
+        font-size: .8rem;
+        padding-block: 0.2em;
+    }
+}
+.grade-delete > .del{
+    outline: 0;
+    padding: .5em 1.2em;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    background-color: var(--delete-red);
+    cursor: pointer;
+
+    @media(max-width:420px){
+        padding-inline: .8em;
+        font-size: .7rem;
+    }
+}
+
+/* Remove Student */
+.remove{
+    padding: 2em;
+    display: grid;
+    gap: .8em;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 20%));
+}
+.remove > *{
+    border: 0;
+    background-color: var(--delete-red);
+    color: #fff;
+    padding-block: .8em;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: .86rem;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease-out;
+    background-color: hsla(31, 100%, 48%, 1.00);
+}
+.remove > *:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+/* Transform data buttons */
+.transform-btns{
+    padding: 2em;
+    display: grid;
+    gap: .8em;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 20%));
+}
+.transform-btns > *{
+    border: 0;
+    background-color: var(--delete-red);
+    color: #fff;
+    padding-block: .8em;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: .86rem;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease-out;
+
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+    &:nth-child(1){
+        background-color: hsl(199, 84%, 63%);
+    }
+    &:nth-child(2){
+        background-color: hsl(152, 61%, 52%);
+    }
+}
+
+/*  top students*/
+.top-students-displayed{
+    padding: 2em;
+}
+.top-students-displayed > .top3{
+    color: hsl(203, 39%, 57%);
+    padding-bottom: .8em;
+    font-size: 1.3rem;
+    display: none;
+}
+.top-students-displayed p{
+    font-size: 1.1rem;
+    padding-bottom: .6em;
+    font-weight: 500;
+}
+
+/* Stats */
+.stats{
+    padding-inline: 2em;
+    padding-block-end: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 18px;
+}
+.stats > *{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #edede9;
+    min-height: 100px;
+    padding: 1em;
+    text-align: center;
+    align-content: center;
+    border-radius: 6px;
+}
+.num{
+    color: hsl(199, 84%, 63%);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+
+/* Media queries */
+@media (max-width:700px) {
+.add-student{
+    display: flex;
+    flex-direction: column;
+}
+.add-input{
+    width: 100%;
+}
+.add-student > button{
+   margin-inline: 2em;
+}
+}
