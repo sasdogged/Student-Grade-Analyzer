@@ -100,6 +100,12 @@ addBtn.addEventListener("click", () => {
   deleteBtn.addEventListener("click", () => {
     studentDiv.remove();
 
+    const students = JSON.parse(localStorage.getItem("studentData")) || [];
+    const index = Array.from(studentsDiv.children).indexOf(studentDiv);
+    students.splice(index, 1);
+    localStorage.setItem("studentData", JSON.stringify(students));
+
+
     updateStats()
   });
 
@@ -173,6 +179,8 @@ removeF.addEventListener("click", function () {
     if (gradeText === "F") {
       student.remove();
     }
+
+    updateStats()
   });
 
   // Update the localStorage
@@ -196,6 +204,7 @@ function addBonusPoints() {
     const gradeElem = student.querySelector(".grade")
     gradeElem.textContent = getLetterGrade(newScore)
 
+    updateStats()
   })
 
   const savedStudents = JSON.parse(localStorage.getItem("studentData")) || []
@@ -221,12 +230,13 @@ const topStudent = document.getElementById("top-students")
 const headerTop = document.querySelector(".top3")
 function showTopStudents() {
 
-  const savedStudents = JSON.parse(localStorage.getItem("studentData"))
+  const savedStudents = JSON.parse(localStorage.getItem("studentData")) || []
   const copyOfStudents = [...savedStudents]
 
   let sortedStudents = copyOfStudents.sort((a, b) => b.score - a.score)
   let top3 = sortedStudents.slice(0, 3)
 
+  topStudent.innerHTML = ""
   top3.forEach((student, index) => {
     topStudent.innerHTML += `
       <p>${index + 1}.  ${student.name} -  ${student.score}<p/>
