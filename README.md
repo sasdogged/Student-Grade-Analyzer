@@ -1,7 +1,7 @@
 # Student Grade Analyser
 A simple web-based student grade analytics tool that enables users to input and analyse student performance data in the browser.
 
-🚀 [Live Link](https://student-grade-analyzer.vercel.app/)
+🚀 ### [Live Link](https://student-grade-analyzer.vercel.app/)
 
 ## 🧠 Overview
 - Student grade analyser is a frontend web application that helps teachers or tutors:
