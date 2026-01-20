@@ -1,30 +1,42 @@
-# Student Grade Analyser
-A simple web-based student grade analytics tool that enables users to input and analyse student performance data in the browser.
+# 🎓 Student Grade Analyser
+A simple, browser‑based Student Grade Analyzer that allows users to input student scores and instantly analyze academic performance. The application focuses on clarity, ease of use, and basic data insights, making it ideal for learning frontend fundamentals and simple data processing in JavaScript..
 
- ## 🚀 [Live Link](https://student-grade-analyzer.vercel.app/)
+ ## 🔗 Live Demo: https://student-grade-analyzer.vercel.app/
 
-## 🧠 Overview
-- Student grade analyser is a frontend web application that helps teachers or tutors:
-  * To enter a student name and score.
-  * Calculate and Grade them appropriately.
-  * Delete a Student's grade.
-  * Be able remove an F grade.
-  * Add extra points.
-  * Show the top three(3) students.
-  * Calculate and Display students stats.
+##  Overview
+The Student Grade Analyzer is a lightweight web application built with HTML, CSS, and JavaScript. It enables users to enter student grades and automatically calculates useful metrics such as averages and overall performance trends.
+- This project is suitable for:
+ * Beginners learning JavaScript logic
+ * Practicing DOM manipulation
+ * Demonstrating a small but complete frontend project
 
-## 📦 Technologies Used
+## Features
+- Input and Add student names and grades.
+- Automatically calculate averages.
+- Display results in a structured table.
+- Real‑time updates as new data is added.
+- Simple and intuitive user interface.
+
+  
+## 📦 Tech Stack Used
 - HTML
-  * For the Markup
+  * For the Markup and Structure
     
 - CSS
-  * For Styling
+  * For Styling and Layout
     
 - JavaScript
-  * Logic and Functionality
- 
-## 📋 How It Works
-- Input and Add a student name and score.
-- View the Student List.
-- 
-- Analyse the Performance and Stats.
+  * Logic, Data Processing and Functionality
+
+ ## Project Structure
+ Student-Grade-Analyzer/
+  ├── index.html # Main application UI
+  ├── style.css # Styling
+  ├── script.js # Application logic
+  └── README.md # Project documentation
+
+## Acknowledgements
+
+Built as a learning‑focused project to practice frontend development and JavaScript fundamentals. Inspired by common educational data analysis use cases.
+
+
