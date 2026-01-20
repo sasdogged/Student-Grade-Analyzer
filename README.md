@@ -18,7 +18,7 @@ The Student Grade Analyzer is a lightweight web application built with HTML, CSS
 - Simple and intuitive user interface.
 
   
-## 📦 Tech Stack Used
+##  Tech Stack Used
 - HTML
   * For the Markup and Structure
     
