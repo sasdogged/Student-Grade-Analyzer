@@ -29,11 +29,14 @@ The Student Grade Analyzer is a lightweight web application built with HTML, CSS
   * Logic, Data Processing and Functionality
 
  ## Project Structure
+
+ ```text
  Student-Grade-Analyzer/
   ├── index.html # Main application UI
   ├── style.css # Styling
   ├── script.js # Application logic
   └── README.md # Project documentation
+```
 
 ## Acknowledgements
 
